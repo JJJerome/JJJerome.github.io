@@ -11,7 +11,7 @@ profile:
   address: >
     <p>A213, Ashton Building</p>
     <p>Ashton Street</p>
-    <p>Liverpool L69 3BX.</p>
+    <p>Liverpool, L69 3BX.</p>
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
