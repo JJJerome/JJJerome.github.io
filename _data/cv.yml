@@ -1,12 +1,12 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Joseph Jerome
-    - name: Date of Birth
-      value: 20th February 1994
-    - name: Languages
-      value: English, Spanish
+# - title: General Information
+#   type: map
+#   contents:
+#     - name: Full Name
+#       value: Joseph Jerome
+#     - name: Date of Birth
+#       value: 20th February 1994
+#     - name: Languages
+#       value: English, Spanish
 
 # - title: Education
 #   type: time_table
