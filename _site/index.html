@@ -77,6 +77,9 @@
                 <a class="nav-link" href="/publications/">publications</a>
               </li>
               <li class="nav-item ">
+                <a class="nav-link" href="/conference_talks/">conference talks</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link" href="/cv/">cv</a>
               </li>
               <li class="nav-item dropdown ">
@@ -138,9 +141,9 @@
           </div>
 
           <div class="clearfix">
-            <p>I am a postdoctoral researcher in the Department of Computer Science at the University of Liverpool working with <a href="https://www.liverpool.ac.uk/computer-science/staff/rahul-savani/" target="_blank" rel="noopener noreferrer">Professor Rahul Savani</a>. I am interested in designing reinforcement learning (RL) agents which can learn how to act optimally to <a href="https://en.wikipedia.org/wiki/Market_maker" target="_blank" rel="noopener noreferrer">make markets</a>. Since the agent’s interaction with the financial market in turn causes the future dynamics to change, it requires a market model that is adaptive. One way of achieving this is to create a <a href="https://worldmodels.github.io/" target="_blank" rel="noopener noreferrer">world model</a> of the financial market which generates order flow according to the history of the <a href="https://www.5minutefinance.org/concepts/the-limit-order-book" target="_blank" rel="noopener noreferrer">limit order book</a> up to that point.</p>
+            <p>A researcher working in the field of financial machine learning, statistics and mathematics. Recently, I finished a postdoc in the Department of Computer Science at the University of Liverpool working with <a href="https://www.liverpool.ac.uk/computer-science/staff/rahul-savani/" target="_blank" rel="noopener noreferrer">Professor Rahul Savani</a>. In particular, I am interested in designing reinforcement learning (RL) agents which can learn how to act optimally to <a href="https://en.wikipedia.org/wiki/Market_maker" target="_blank" rel="noopener noreferrer">make markets</a> or optimally execute a large order.</p>
 
-<p>A popular choice for the world model is to use an analytical model of the orderbook dynamics with a concrete mathematical representation. However, this suffers from a variety of issues that arise due to the inability of the chosen model to reproduce “empirical facts” observed in real-life limit order books due to its simplicity. An exciting alternative is to “learn” the orderbook dynamics using a deep generative model such as a conditional <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank" rel="noopener noreferrer">GAN</a> or a conditional <a href="https://en.wikipedia.org/wiki/Variational_autoencoder" target="_blank" rel="noopener noreferrer">VAE</a>. This enables much more complex dynamics to by captured and the realism of the simulated orderbook to vastly improve. One can then train a reinforcement learning agent to optimally make markets in this environment.</p>
+<p>I am also interested in designing better “backtests”, for testing the performance of trading/execution strategies. Since the agent’s interaction with the financial market in turn causes the future dynamics to change, it requires a market model that is adaptive. This is conspicuously missing from almost all backtesting environments, but one way of achieving this is to create a <em>conditional</em> <a href="https://worldmodels.github.io/" target="_blank" rel="noopener noreferrer">world model</a> of the financial market which generates order flow according to the history of the <a href="https://www.5minutefinance.org/concepts/the-limit-order-book" target="_blank" rel="noopener noreferrer">limit order book</a> up to that point. A popular choice for the world model is to use an analytical model of the orderbook dynamics with a concrete mathematical representation. However, this suffers from a variety of issues that arise due to the inability of the chosen model to reproduce “empirical facts” observed in real-life limit order books due to its simplicity. An exciting alternative is to “learn” the orderbook dynamics using a deep generative model such as a conditional <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank" rel="noopener noreferrer">GAN</a> or a conditional <a href="https://en.wikipedia.org/wiki/Variational_autoencoder" target="_blank" rel="noopener noreferrer">VAE</a>. This enables much more complex dynamics to by captured and the realism of the simulated orderbook to vastly improve. One can then train a reinforcement learning agent to optimally make markets in this environment. Recently, I have been working on improving a conditional GAN model for order flow with my industry collaborators at JP Morgan.</p>
 
 <p>Before joining Liverpool, I did my PhD in Statistics at the University of Warwick under the supervision of <a href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/hobson/" target="_blank" rel="noopener noreferrer">Professor David Hobson</a> and <a href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/herdegen" target="_blank" rel="noopener noreferrer">Dr Martin Herdegen</a>, where I worked on problems on financial stochastic optimal control. In particular, I researched a variant of <a href="https://en.wikipedia.org/wiki/Merton%2527s_portfolio_problem" target="_blank" rel="noopener noreferrer">Merton’s optimal investment-consumption problem</a> where the agent’s preferences are given by stochastic differential utility.</p>
 
@@ -156,13 +159,62 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/merton.png"></div>
+        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/imb_plot.jpg"></div>
 
         <!-- Entry bib key -->
-        <div id="herdegen2021elementary" class="col-sm-8">
+        <div id="coletta2023conditional" class="col-sm-8">
         
           <!-- Title -->
-          <div class="title">An elementary approach to the Merton problem</div>
+          <div class="title">Conditional Generators for Limit Order Book Environments. Explainability, Challenges, and Robustness</div>
+          <!-- Author -->
+          <div class="author">
+          Coletta, Andrea, 
+                  <em>Jerome, Joseph</em>, 
+                Savani, Rahul
+
+          
+            
+            
+            and
+            <span class="more-authors" title="click to view 1 more author" onclick="
+                  var element = $(this);
+                  element.attr('title', '');
+                  var more_authors_text = element.text() == '1 more author' ? 'Vyetrenko, Svitlana' : '1 more author';
+                  var cursorPosition = 0;
+                  var textAdder = setInterval(function(){
+                    element.text(more_authors_text.substring(0, cursorPosition + 1));
+                    if (++cursorPosition == more_authors_text.length){
+                      clearInterval(textAdder);
+                    }
+                  }, 15);
+                ">1 more author</span>
+          
+
+          </div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>arXiv preprint arXiv:2306.12806</em> 2023
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+          </div>
+
+          
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/false_value_function_CRRA_nu_big.png"></div>
+
+        <!-- Entry bib key -->
+        <div id="herdegen2023infinitf" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">The infinite-horizon investment–consumption problem for Epstein–Zin stochastic differential utility. I. Foundations</div>
           <!-- Author -->
           <div class="author">
           Herdegen, Martin, Hobson, David,  and 
@@ -175,26 +227,14 @@
 
           <!-- Journal/Book title and date -->
           <div class="periodical">
-            <em>Mathematical Finance</em> 2021
+            <em>Finance and Stochastics</em> 2023
           </div>
         
           <!-- Links/Buttons -->
           <div class="links">
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
           </div>
 
-          <!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">herdegen2021elementary</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{An elementary approach to the Merton problem}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Herdegen, Martin and Hobson, David and Jerome, Joseph}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Mathematical Finance}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{31}</span><span class="p">,</span>
-  <span class="na">number</span> <span class="p">=</span> <span class="s">{4}</span><span class="p">,</span>
-  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1218--1239}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
+          
         </div>
       </div>
 </li>
@@ -240,6 +280,100 @@
         </div>
       </div>
 </li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/market_making_inventory.jpg"></div>
+
+        <!-- Entry bib key -->
+        <div id="jerome2022model" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Model-based gym environments for limit order book trading</div>
+          <!-- Author -->
+          <div class="author">
+          
+                  <em>Jerome, Joseph</em>, Sánchez-Betancourt, Leandro, 
+                Savani, Rahul
+
+          
+            
+            
+            and
+            <span class="more-authors" title="click to view 1 more author" onclick="
+                  var element = $(this);
+                  element.attr('title', '');
+                  var more_authors_text = element.text() == '1 more author' ? 'Herdegen, Martin' : '1 more author';
+                  var cursorPosition = 0;
+                  var textAdder = setInterval(function(){
+                    element.text(more_authors_text.substring(0, cursorPosition + 1));
+                    if (++cursorPosition == more_authors_text.length){
+                      clearInterval(textAdder);
+                    }
+                  }, 15);
+                ">1 more author</span>
+          
+
+          </div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>arXiv preprint arXiv:2209.07823</em> 2022
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+          </div>
+
+          
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/merton.png"></div>
+
+        <!-- Entry bib key -->
+        <div id="herdegen2021elementary" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">An elementary approach to the Merton problem</div>
+          <!-- Author -->
+          <div class="author">
+          Herdegen, Martin, Hobson, David,  and 
+                <em>Jerome, Joseph</em>
+                
+
+          
+
+          </div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>Mathematical Finance</em> 2021
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">herdegen2021elementary</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{An elementary approach to the Merton problem}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Herdegen, Martin and Hobson, David and Jerome, Joseph}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Mathematical Finance}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{31}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{4}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1218--1239}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
 </ol>
           </div>
 
@@ -269,7 +403,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2022 Joseph  Jerome. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme.
+        © Copyright 2023 Joseph  Jerome. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme.
 
       </div>
     </footer>
